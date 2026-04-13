@@ -11,7 +11,7 @@ const FONT_LINK =
   "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&family=Bricolage+Grotesque:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap";
 
 // ─── API & Mock Data ──────────────────────────────────────────────────────────
-const API_URL = "https://radar-api.onrender.com/api/v1/get-routes";
+const API_URL = "https://safarguru-backend.onrender.com/api/v1/get-routes";
 const TOMTOM_API_KEY = import.meta.env.VITE_TOMTOM_API_KEY;
 
 // const MOCK_LOCATIONS = [
