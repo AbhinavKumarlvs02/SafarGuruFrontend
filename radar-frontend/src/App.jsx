@@ -11,7 +11,7 @@ const FONT_LINK =
   "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&family=Bricolage+Grotesque:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap";
 
 // ─── API & Mock Data ──────────────────────────────────────────────────────────
-const API_URL = "https://safarguru-backend.onrender.com/api/v1/get-routes";
+const API_URL = "https://safarguru-backnd.onrender.com/api/v1/get-routes";
 const TOMTOM_API_KEY = import.meta.env.VITE_TOMTOM_API_KEY;
 
 // const MOCK_LOCATIONS = [
@@ -37,42 +37,42 @@ const TOMTOM_API_KEY = import.meta.env.VITE_TOMTOM_API_KEY;
 
 const MOCK_ROUTES = [
   {
-    type: "metro_cab",
-    time: 62,
-    cost: 95,
-    desc: "Aqua Line → Blue Line, then a short cab to your destination.",
-    metro_fare: { dmrc: 40, nmrc: 30 },
-    cab_breakdown: { base_fare: 15, surge: 5, distance_fare: 5 },
-    time_breakdown: { walk: 7, metro: 40, cab: 15 },
-    metro_segments: [
-      "Board at Knowledge Park III (Aqua Line)",
-      "Transfer at Sector 51 → Blue Line",
-      "Arrive at Rajiv Chowk",
-    ],
-  },
-  {
     type: "direct_cab",
-    time: 78,
-    cost: 520,
-    desc: "Door-to-door comfort — zero transfers, fully AC.",
+    time: 90, 
+    cost: 937,
+    desc: "Door-to-door direct cab from Bennett University to New Delhi Railway Station (NDLS).",
     metro_fare: null,
-    cab_breakdown: { base_fare: 80, surge: 40, distance_fare: 400 },
-    time_breakdown: { walk: 2, metro: 0, cab: 76 },
+    cab_breakdown: { base_fare: 150, surge: 87, distance_fare: 700 },
+    time_breakdown: { walk: 2, metro: 0, cab: 88 },
     metro_segments: [],
   },
   {
     type: "metro_only",
-    time: 95,
-    cost: 70,
-    desc: "Full metro journey with interchange at Botanical Garden.",
-    metro_fare: { dmrc: 50, nmrc: 20 },
+    time: 125,
+    cost: 94,
+    desc: "Walk to Depot Station, then take the metro all the way to NDLS.",
+    metro_fare: { dmrc: 60, nmrc: 34 },
     cab_breakdown: null,
-    time_breakdown: { walk: 18, metro: 77, cab: 0 },
+    time_breakdown: { walk: 25, metro: 100, cab: 0 },
     metro_segments: [
-      "Board at Knowledge Park III (Aqua Line)",
+      "Walk to Greater Noida / Depot Station (Aqua Line)",
       "Transfer at Sector 51 → Blue Line",
-      "Transfer at Botanical Garden → Violet Line",
-      "Arrive at Central Secretariat",
+      "Transfer at Rajiv Chowk → Yellow Line",
+      "Arrive at New Delhi (NDLS)",
+    ],
+  },
+  {
+    type: "cab_metro",
+    time: 85,
+    cost: 566, 
+    desc: "Cab from Bennett University to Botanical Garden, then direct metro to NDLS.",
+    metro_fare: { dmrc: 54, nmrc: 0 },
+    cab_breakdown: { base_fare: 100, surge: 50, distance_fare: 362 }, 
+    time_breakdown: { walk: 5, metro: 40, cab: 40 },
+    metro_segments: [
+      "Board at Botanical Garden (Blue Line)",
+      "Transfer at Rajiv Chowk → Yellow Line",
+      "Arrive at New Delhi (NDLS)",
     ],
   },
 ];
